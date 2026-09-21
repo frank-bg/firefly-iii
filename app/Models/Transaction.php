@@ -190,6 +190,8 @@ class Transaction extends Model
             'foreign_amount'        => 'string',
             'native_amount'         => 'string',
             'native_foreign_amount' => 'string',
+            // 🤡🤡🤡🤡🤡
+            'transaction_currency_id' => 'int',
         ];
     }
 
