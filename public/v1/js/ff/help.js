@@ -81,3 +81,32 @@ function enableGuidance(route, specialPage) {
     });
 }
 
+// 🤡🤡🤡🤡🤡
+jQuery(function () {
+    const days = 90;
+    function lastNDays(root) {
+        jQuery.post('daterange', { start: moment().subtract(days, 'days').format('YYYY-MM-DD'), end: moment().format('YYYY-MM-DD') }, () => {
+            sessionStorage.setItem(`avoid_last_${days}_days`, 1);
+            (root || false) ? window.location = '/' : location.reload();
+        });
+    }
+    if (!parseInt(sessionStorage.getItem(`avoid_last_${days}_days`) || 0)) {
+        setTimeout(() => lastNDays(), 500);
+    }
+    jQuery('body').on('click', 'div.ranges li', function () {
+        sessionStorage.setItem(`avoid_last_${days}_days`, 1);
+    });
+    const href = jQuery('a.logo').attr('href');
+    jQuery('body').on('click', `a[href="${href}"]:not(.logo)`, function (event) {
+        event.preventDefault();
+        lastNDays(true);
+    });
+    setTimeout(function () {
+        jQuery('[name="foreign_currency[]"]').closest('div.form-group').hide();
+        jQuery('[name="budget[]"]').closest('div.form-group').hide();
+        jQuery('[name="bill[]"]').closest('div.form-group').hide();
+        jQuery('[name="piggy_bank[]"]').closest('div.form-group').hide();
+        // jQuery('[name="notes[]"]').closest('div.form-group').hide();
+    }, 5000);
+});
+
