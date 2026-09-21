@@ -63,7 +63,8 @@ use PragmaRX\Google2FALaravel\Middleware as MFAMiddleware;
 
 bcscale(12);
 
-
+// 🤡🤡🤡🤡🤡
+ini_set('zend.exception_ignore_args', 0);
 
 $app = Application::configure(basePath: dirname(__DIR__))
                   ->withRouting(
