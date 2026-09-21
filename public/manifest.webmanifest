@@ -1,4 +1,39 @@
 {
+    "\ud83e\udd21\ud83e\udd21\ud83e\udd21\ud83e\udd21\ud83e\udd21": "\ud83e\udd21\ud83e\udd21\ud83e\udd21\ud83e\udd21\ud83e\udd21",
+    "scope": "/",
+    "categories": [
+        "finance",
+        "productivity"
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Add withdrawal",
+            "short_name": "Add withdrawal",
+            "description": "Add a new withdrawal to Firefly III",
+            "url": "/transactions/create/withdrawal",
+            "icons": [
+                {
+                    "src": "/maskable96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Add deposit",
+            "short_name": "Add deposit",
+            "description": "Add a new deposit to Firefly III",
+            "url": "/transactions/create/deposit",
+            "icons": [
+                {
+                    "src": "/maskable96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
     "name": "Firefly III",
     "short_name": "Firefly III",
     "start_url": "/",
